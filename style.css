@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Poppins", serif;
+  font-size: 1.5em;
+  background-color: #fff;
+  color: #444;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: "Poppins", serif;
+}
+/* body , html {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    } */
+a,
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+.header {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("./img_project/bg_img_header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+/* _______________________________________________________- */
+.Window--Tape--Links--Responsive {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  gap: 1rem;
+  transition: all ease-in 300ms;
+  transform: translateY(0px);
+  z-index: 101;
+}
+.Window--Tape--Links--Responsive a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #000;
+}
+.svg--clos--Window--Tape--Links {
+  width: 40px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.clos--Window--Tape--Links {
+  transform: translateY(-330px);
+}
+.svg__top--bott {
+  width: 35px;
+  transition: all ease-in 50ms;
+  transform: rotate(0deg);
+}
+.transform--rotate {
+  transform: rotate(180deg);
+}
+/* _______________________________________________________-- */
+.nav {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  z-index: 100;
+}
+.sticky {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  padding: 0rem 1rem;
+}
+.box__title {
+  display: flex;
+  align-items: center;
+}
+.box__title h1 {
+  font-weight: 900;
+  color: #fff;
+}
+.span__title {
+  color: #ff7043;
+  text-shadow: 0px 0px 20px rgba(255, 171, 145, 0.8);
+}
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.nav__links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.box__btn--login,
+.btn__login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box__btn--login {
+  gap: 1.5rem;
+}
+.btn__login {
+  gap: 4px;
+}
+.btn__login {
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: inherit;
+  color: #fff;
+  border: 2px dashed #ff7043;
+  transition: all ease-in 300ms;
+  box-shadow: 0px 0px 8px rgba(255, 171, 145, 0.4);
+}
+.svg__login {
+  width: 18px;
+  transition: all ease-in 300ms;
+}
+.btn__login:hover {
+  background-color: #ff7043;
+}
+.btn__login:hover svg {
+  transform: translateX(8px);
+}
+.svg--open--Window--Tape--Links {
+  width: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+/* _______________________________________________________________ */
+.content__header {
+  width: 75%;
+  margin: 7rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.3rem;
+  transition: transform 1s, opacity 1s;
+  transform: translateY(0px);
+}
+.transform--opacity {
+  transform: translateY(50px);
+  opacity: 0;
+}
+.content__header h2 {
+  width: 85%;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+}
+.content__header p {
+  width: 65%;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+}
+.content__header button {
+  width: 150px;
+  height: 40px;
+  border: none;
+  background-color: #ff7043;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0px 0px 8px rgba(255, 171, 145, 0.4);
+}
+.content__header a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px dashed #fff;
+}
+.content__header a > svg {
+  width: 20px;
+}
+/* __________________________________________________________ */
+.model__form {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background-color: #fff;
+  padding: 3rem 0;
+  border-radius: 8px;
+  z-index: 100;
+}
+.svg__clos {
+  width: 40px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.model__form form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.model__form form > input {
+  width: 70%;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid rgb(144, 164, 174);
+  padding-left: 1rem;
+  transition: all ease-in 300ms;
+}
+.model__form form > input:focus {
+  border-bottom: 2px solid rgb(41, 182, 246);
+}
+.model__form form > input:focus::placeholder {
+  transform: translateY(-15px);
+  color: rgb(41, 182, 246);
+}
+.model__form form > button {
+  width: 70%;
+  height: 40px;
+  border: none;
+  background-color: #ff7043;
+  border-radius: 8px;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #fff;
+  transition: all ease-in 300ms;
+}
+.svg__btn__form {
+  width: 18px;
+  transition: all ease-in 300ms;
+}
+.model__form form > button:hover {
+  background-color: #000;
+}
+.model__form form > button:hover svg {
+  transform: translateX(7px);
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 90;
+  transition: all 0.5s;
+}
+/* _______________________________________________________ */
+.display__none {
+  display: none;
+}
+/* _____________________________________________________ */
+@media screen and (max-width: 1153px) {
+  .content__header h2 {
+    width: 90%;
+    font-size: 2.9rem;
+  }
+  .nav__links a {
+    font-size: 0.9rem;
+  }
+  .box__title h1 {
+    font-weight: 900;
+    font-size: 2rem;
+  }
+  .btn__login {
+    width: 120px;
+    height: 38px;
+    font-size: 0.9rem;
+  }
+  .content__header p {
+    width: 85%;
+    font-size: 0.9rem;
+  }
+  .content__header button {
+    width: 120px;
+    height: 38px;
+    font-size: 0.9rem;
+  }
+  .content__header a {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 999px) {
+  .nav {
+    width: 100%;
+  }
+  .box__title h1 {
+    font-size: 1.7rem;
+  }
+  .nav__links a {
+    font-size: 0.8rem;
+  }
+  .btn__login {
+    width: 110px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+  .btn__login {
+    gap: 2px;
+  }
+  .content__header h2 {
+    font-size: 2.2rem;
+  }
+  .content__header p {
+    width: 80%;
+    font-size: 0.7rem;
+  }
+  .content__header button {
+    width: 110px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+  .content__header a {
+    font-size: 0.8rem;
+  }
+  .content__header a > svg {
+    width: 17px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .box__title h1 {
+    font-size: 1.3rem;
+  }
+  .nav__links {
+    gap: 0.8rem;
+  }
+  .nav__links a {
+    font-size: 0.6rem;
+  }
+  .content__header h2 {
+    font-size: 1.7rem;
+  }
+  .content__header p {
+    width: 85%;
+    font-size: 0.5rem;
+  }
+}
+@media screen and (max-width: 580px) {
+  .nav__links {
+    display: none;
+  }
+  .svg--open--Window--Tape--Links {
+    display: flex;
+  }
+  .box__btn--login {
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 530px) {
+  .content__header h2 {
+    font-size: 1.2rem;
+  }
+  .content__header {
+    margin: 4rem auto 0 auto;
+    gap: 0.6rem;
+  }
+  .content__header button {
+    width: 90px;
+    height: 30px;
+    font-size: 0.6rem;
+  }
+  .content__header a {
+    font-size: 0.6rem;
+  }
+  .content__header a > svg {
+    width: 13px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .model__form {
+    width: 300px;
+    padding: 2rem 0;
+  }
+  .model__form form > button {
+    height: 35px;
+    gap: 2px;
+  }
+  .svg__clos {
+    width: 30px;
+  }
+  .Window--Tape--Links--Responsive {
+    padding: 0.8rem 0;
+    gap: 0.6rem;
+  }
+  .svg--clos--Window--Tape--Links {
+    width: 35px;
+  }
+  .Window--Tape--Links--Responsive a {
+    font-size: 0.7rem;
+  }
+  .btn__login {
+    width: 90px;
+    height: 30px;
+    font-size: 0.6rem;
+  }
+  .svg__login {
+    width: 12px;
+  }
+  .svg--open--Window--Tape--Links {
+    width: 30px;
+  }
+}
+/* ______________________________________________________________ */
+.section,
+.footer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8rem;
+  height: 100vh;
+  border-bottom: 1px solid rgb(207, 216, 220);
+}
+.box_btn_titleTEXT--section1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.box__title_text_section1 {
+  width: 60%;
+}
+.box__title_text_section1 h4 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.box__title_text_section1 p {
+  font-size: 1rem;
+  width: 75%;
+  color: #78909c;
+}
+.box_btn_section1 button {
+  width: 150px;
+  height: 45px;
+  border-radius: 8px;
+  background-color: inherit;
+  border: 2px solid #ff7043;
+  color: #ff7043;
+  font-size: 1rem;
+  font-weight: 900;
+  transition: all ease-in 200ms;
+}
+.box_btn_section1 button:hover {
+  background: #000;
+  border: none;
+}
+.box_carts_section1 {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+.cart {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+  background: #f1f1f1;
+  border-radius: 8px;
+  padding: 1rem 0.5rem;
+}
+.svg_section1 {
+  width: 70px;
+  color: #ff7043;
+  background-color: rgba(255, 204, 188, 0.6);
+  padding: 0.6rem;
+  border-radius: 100%;
+  transition: all ease-in 200ms;
+}
+.cart h4 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.cart p {
+  width: 90%;
+  font-size: 1rem;
+  color: #78909c;
+}
+.cart a {
+  text-decoration: none;
+  color: #ff7043;
+  font-size: 1rem;
+}
+.cart:hover svg {
+  background-color: #ff7043;
+  color: #fff;
+  transform: scale(1.1);
+}
