@@ -77,6 +77,10 @@ button {
   transform: rotate(180deg);
 }
 /* _______________________________________________________-- */
+.sticky-nav-container {
+  height: 90px;
+  top: -1px;
+}
 .nav {
   width: 80%;
   margin: 0 auto;

@@ -105,12 +105,13 @@ WindowTapeLinksResponsive.addEventListener("click", function (e) {
 ////////////////////////////////////////////////////////
 const functionInterSection = function (entries) {
   const [entry] = entries;
-  console.log(entry);
+
   if (!entry.isIntersecting) {
     nav.classList.add("sticky");
-  } else {
-    nav.classList.remove("sticky");
+    return;
   }
+
+  nav.classList.remove("sticky");
 };
 const intersectionNavLink = new IntersectionObserver(functionInterSection, {
   root: null,
