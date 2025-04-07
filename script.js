@@ -105,7 +105,7 @@ WindowTapeLinksResponsive.addEventListener("click", function (e) {
 ////////////////////////////////////////////////////////
 const functionInterSection = function (entries) {
   const [entry] = entries;
-  console.log(entry);
+  // console.log(entry);
   if (!entry.isIntersecting) {
     nav.classList.add("sticky");
   } else {

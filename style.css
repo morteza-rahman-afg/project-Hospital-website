@@ -79,7 +79,7 @@ button {
 /* _______________________________________________________-- */
 .sticky-nav-container {
   height: 90px;
-  top: -1px;
+  /* top: -1px; */
 }
 .nav {
   width: 80%;
