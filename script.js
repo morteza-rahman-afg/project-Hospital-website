@@ -18,10 +18,15 @@ const contentHeader = document.querySelector(".content__header");
 const Section1NavigationLink = document.querySelector(
   ".Section1_navigation_link"
 );
-const section__1 = document.querySelector("#section--1");
+const sectio1 = document.querySelector("#section--1");
+const sections = document.querySelectorAll(".section");
 const navLinks = document.querySelector(".nav__links");
 const header = document.querySelector(".header");
 const nav = document.querySelector(".nav");
+const cart_1 = document.querySelector(".cart_1");
+const cart_2 = document.querySelector(".cart_2");
+const cart_3 = document.querySelector(".cart_3");
+const box_carts_section1 = document.querySelector(".box_carts_section1");
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
@@ -65,7 +70,7 @@ window.addEventListener("load", function (e) {
 ///// Section 1 navigation link:
 Section1NavigationLink.addEventListener("click", function (e) {
   e.preventDefault();
-  section__1.scrollIntoView({ behavior: "smooth" });
+  sectio1.scrollIntoView({ behavior: "smooth" });
 });
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
@@ -117,3 +122,46 @@ const intersectionNavLink = new IntersectionObserver(functionInterSection, {
   threshold: 0,
 });
 intersectionNavLink.observe(header);
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+const functionInterSection1 = function (entries, observe) {
+  const [entry] = entries;
+  console.log(entry);
+  if (!entry.isIntersecting) return;
+  cart_1.classList.add("transform__translateX-0");
+  setTimeout(() => {
+    cart_2.classList.add("transform__translateX-0");
+  }, 900);
+  setTimeout(() => {
+    cart_3.classList.add("transform__translateX-0");
+  }, 1200);
+};
+const intersectionSection1 = new IntersectionObserver(functionInterSection1, {
+  root: null,
+  threshold: 0.5,
+});
+intersectionSection1.observe(box_carts_section1);
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+const functionSections = function (entries, observe) {
+  const [entry] = entries;
+  console.log(entry);
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("transform__translateY-0");
+  observe.unobserve(entry.target);
+};
+const newIntersectionObserverSections = new IntersectionObserver(
+  functionSections,
+  {
+    root: null,
+    threshold: 0.15,
+  }
+);
+sections.forEach((section) => {
+  newIntersectionObserverSections.observe(section);
+  section.classList.add("transform__translateY-0");
+});
