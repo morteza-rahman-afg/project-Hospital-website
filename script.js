@@ -128,12 +128,12 @@ intersectionNavLink.observe(header);
 ///////////////////////////////////////////////////////////
 const functionInterSection1 = function (entries, observe) {
   const [entry] = entries;
-  console.log(entry);
+  // console.log(entry);
   if (!entry.isIntersecting) return;
   cart_1.classList.add("transform__translateX-0");
   setTimeout(() => {
     cart_2.classList.add("transform__translateX-0");
-  }, 900);
+  }, 800);
   setTimeout(() => {
     cart_3.classList.add("transform__translateX-0");
   }, 1200);
@@ -149,7 +149,7 @@ intersectionSection1.observe(box_carts_section1);
 ///////////////////////////////////
 const functionSections = function (entries, observe) {
   const [entry] = entries;
-  console.log(entry);
+  // console.log(entry);
   if (!entry.isIntersecting) return;
   entry.target.classList.remove("transform__translateY-0");
   observe.unobserve(entry.target);
