@@ -27,6 +27,10 @@ const cart_1 = document.querySelector(".cart_1");
 const cart_2 = document.querySelector(".cart_2");
 const cart_3 = document.querySelector(".cart_3");
 const box_carts_section1 = document.querySelector(".box_carts_section1");
+const boxCartDoctor = document.querySelector(".box_cart_Doctor");
+const cartDoctor1 = document.querySelector(".cart_Doctor--1");
+const cartDoctor2 = document.querySelector(".cart_Doctor--2");
+const cartDoctor3 = document.querySelector(".cart_Doctor--3");
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
@@ -165,3 +169,26 @@ sections.forEach((section) => {
   newIntersectionObserverSections.observe(section);
   section.classList.add("transform__translateY-0");
 });
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+const IntersectionObserverboxCartDoctor = function (entries, observe) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  cartDoctor1.classList.add("transform__translateX-0");
+  setTimeout(() => {
+    cartDoctor2.classList.add("transform__translateX-0");
+  }, 800);
+  setTimeout(() => {
+    cartDoctor3.classList.add("transform__translateX-0");
+  }, 1200);
+};
+const intersectionboxCartDoctor = new IntersectionObserver(
+  IntersectionObserverboxCartDoctor,
+  {
+    root: null,
+    threshold: 0.3,
+  }
+);
+intersectionboxCartDoctor.observe(boxCartDoctor);
