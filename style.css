@@ -1131,9 +1131,6 @@ button {
     height: 400px;
     width: 400px;
   }
-  .cart_Doctor {
-    transform: translateX(150px);
-  }
 }
 @media screen and (max-width: 460px) {
   .box_title_text_top h3 {
@@ -1148,9 +1145,6 @@ button {
   .cart_Doctor {
     height: 340px;
     width: 250px;
-  }
-  .cart_Doctor {
-    transform: translateX(150px);
   }
 }
 .footer {
