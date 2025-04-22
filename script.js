@@ -134,12 +134,12 @@ const functionInterSection1 = function (entries, observe) {
   const [entry] = entries;
   // console.log(entry);
   if (!entry.isIntersecting) return;
-  cart_1.classList.add("transform__translateX-0");
+  cart_1.classList.add("transform__translateY-0");
   setTimeout(() => {
-    cart_2.classList.add("transform__translateX-0");
+    cart_2.classList.add("transform__translateY-0");
   }, 800);
   setTimeout(() => {
-    cart_3.classList.add("transform__translateX-0");
+    cart_3.classList.add("transform__translateY-0");
   }, 1200);
 };
 const intersectionSection1 = new IntersectionObserver(functionInterSection1, {
@@ -155,7 +155,7 @@ const functionSections = function (entries, observe) {
   const [entry] = entries;
   // console.log(entry);
   if (!entry.isIntersecting) return;
-  entry.target.classList.remove("transform__translateY-0");
+  entry.target.classList.add("transform__translateY-0");
   observe.unobserve(entry.target);
 };
 const newIntersectionObserverSections = new IntersectionObserver(
@@ -167,7 +167,6 @@ const newIntersectionObserverSections = new IntersectionObserver(
 );
 sections.forEach((section) => {
   newIntersectionObserverSections.observe(section);
-  section.classList.add("transform__translateY-0");
 });
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
@@ -176,12 +175,12 @@ sections.forEach((section) => {
 const IntersectionObserverboxCartDoctor = function (entries, observe) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
-  cartDoctor1.classList.add("transform__translateX-0");
+  cartDoctor1.classList.add("transform__translateY-0");
   setTimeout(() => {
-    cartDoctor2.classList.add("transform__translateX-0");
+    cartDoctor2.classList.add("transform__translateY-0");
   }, 800);
   setTimeout(() => {
-    cartDoctor3.classList.add("transform__translateX-0");
+    cartDoctor3.classList.add("transform__translateY-0");
   }, 1200);
 };
 const intersectionboxCartDoctor = new IntersectionObserver(
